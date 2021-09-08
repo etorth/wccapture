@@ -70,7 +70,7 @@ def captureWCWindow():
     while imgData[downPixEndIndex + 1] == (236, 236, 236):
         downPixEndIndex = downPixEndIndex + 1
 
-    return img.crop((upPixStartIndex % width, upPixStartIndex // width, downPixEndIndex % width, downPixEndIndex // width))
+    return img.crop((upPixStartIndex % width, upPixStartIndex // width, (downPixEndIndex % width) - 10, downPixEndIndex // width))
 
 
 def captureLoop():
